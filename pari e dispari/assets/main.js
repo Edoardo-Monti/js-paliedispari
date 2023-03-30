@@ -48,27 +48,30 @@ Dichiariamo chi ha vinto.
 
 /***************************** SECONDO METODO ********************************** */
 let chiVince = document.querySelector(`#button`)
-let pariDispari = parseInt(document.querySelector(`#pardis`).value)
-
-let tuoNumero = parseInt(document.querySelector(`#numero`).value)
+// let pariDispari = parseInt(document.querySelector(`#pardis`).value)
 
 
 function numeroRandom(){
     let numeroPc =  parseInt(Math.floor(Math.random()*6)+1)
     return numeroPc
 }
-numeroRandom()
+
 
 
 // console.log(numeroRandom())
 
 chiVince.addEventListener(`click`, function(){
     let tuoNumero = parseInt(document.querySelector(`#numero`).value)
-    console.log(tuoNumero)
-    let somma = numeroRandom() + tuoNumero
-    console.log(somma)
+    console.log("tuonum:", tuoNumero)
+    let random = numeroRandom();
+    console.log("random:" + random);
+    let somma = random + tuoNumero
+    console.log("somma:" + somma)
     document.querySelector(`.risultati`).innerHTML += `la somma del tuo numero con quella del pc è : ${somma}`
+    
 })
+
+
 
 // let pari = `pari`
 // function results(){
