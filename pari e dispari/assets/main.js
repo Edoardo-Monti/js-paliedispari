@@ -55,9 +55,10 @@ let tuoNumero = parseInt(document.querySelector(`#numero`).value)
 
 function numeroRandom(){
     let numeroPc =  parseInt(Math.floor(Math.random()*6)+1)
-   
     return numeroPc
 }
+numeroRandom()
+
 
 // console.log(numeroRandom())
 
@@ -66,5 +67,12 @@ chiVince.addEventListener(`click`, function(){
     console.log(tuoNumero)
     let somma = numeroRandom() + tuoNumero
     console.log(somma)
-    
+    document.querySelector(`.risultati`).innerHTML += `la somma del tuo numero con quella del pc è : ${somma}`
 })
+
+// let pari = `pari`
+// function results(){
+//     if(){
+
+//     }
+// }
