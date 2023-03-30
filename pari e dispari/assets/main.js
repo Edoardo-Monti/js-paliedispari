@@ -9,32 +9,62 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-const buttonPari = document.querySelector(`.cursor1`)
-const buttonDispari = document.querySelector(`.cursor2`)
+// let buttonPari = document.querySelector(`.cursor1`)
+// let buttonDispari = document.querySelector(`.cursor2`)
+// let chiVince = document.querySelector(`.cursor3`)
+// let tuoNumero 
+// buttonPari.addEventListener(`click`, function(){
+    
+//     tuoNumero = parseInt(prompt(`scrivi un numero da 1 a 6`))
+   
+    
+// })
+// console.log(tuoNumero)
 
-buttonPari.addEventListener(`click`, function(){
-    let tuoNumero = parseInt(prompt(`scrivi un numero da 1 a 6`))
-    console.log(tuoNumero)
-})
-
-buttonDispari.addEventListener(`click`, function(){
-    let tuoNumero = parseInt(prompt(`scrivi un numero da 1 a 6`))
-    console.log(tuoNumero)
-})
+// buttonDispari.addEventListener(`click`, function(){
+//     let tuoNumero = parseInt(prompt(`scrivi un numero da 1 a 6`)).value
+//     // console.log(tuoNumero)
+// })
 
 //genero un numero random da 1 a 6 con una funzione
+// function numeroRandom(){
+//     let numeroPc =  parseInt(Math.floor(Math.random()*6)+1)
+//     // console.log(numeroPc)
+//     return numeroPc
+//}
+//richiamo la funzione, se no non vedo il risultato
+// numeroRandom();
+// console.log(numeroRandom())
+//sommo i due numeri
+// function sommaNumeri(num1, num2){
+//     console.log(num1 + num2)
+// }
+
+// chiVince.addEventListener(`click`, function(){
+//     let sommaNumeri =  + numeroRandom()
+//     // console.log(sommaNumeri)
+
+// })
+
+/***************************** SECONDO METODO ********************************** */
+let chiVince = document.querySelector(`#button`)
+let pariDispari = parseInt(document.querySelector(`#pardis`).value)
+
+let tuoNumero = parseInt(document.querySelector(`#numero`).value)
+
+
 function numeroRandom(){
     let numeroPc =  parseInt(Math.floor(Math.random()*6)+1)
-    console.log(numeroPc)
+   
     return numeroPc
 }
-//richiamo la funzione, se no non vedo il risultato
-numeroRandom();
 
-function sommaNumeri(num1, num2){
-    console.log(num1 + num2)
-}
+// console.log(numeroRandom())
 
-sommaNumeri(tuoNumero, numeroRandom())
-
-
+chiVince.addEventListener(`click`, function(){
+    let tuoNumero = parseInt(document.querySelector(`#numero`).value)
+    console.log(tuoNumero)
+    let somma = numeroRandom() + tuoNumero
+    console.log(somma)
+    
+})
