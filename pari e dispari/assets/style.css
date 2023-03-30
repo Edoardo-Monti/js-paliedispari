@@ -1,4 +1,4 @@
-h1{
+h1, p {
     text-align: center;
     text-decoration: underline;
 }
@@ -6,13 +6,13 @@ h1{
 .flex{
     display: flex;
     justify-content: space-around;
-    width: 80%;
     margin: 0 auto;
-    border: 1px dashed orange;
-    border-radius: 10px;
 }
 
 .bg-move{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
     background: linear-gradient(
         100deg,
         orange,
@@ -44,6 +44,6 @@ h3{
     background-color: white;
 }
 
-.cursor1, .cursor2{
+.cursor1, .cursor2, .cursor3{
     cursor: pointer;
 }
