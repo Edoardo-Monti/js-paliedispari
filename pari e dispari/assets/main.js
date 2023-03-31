@@ -13,10 +13,9 @@ Dichiariamo chi ha vinto.
 
 
 
-/***************************** SECONDO METODO ********************************** */
+/***************************** PRIMO METODO ********************************** */
  let chiVince = document.querySelector(`#button`)
- let sceltaPariDispari 
-
+ let sceltaPariDispari  = document.querySelector(`#pardis`).value
 
  function numeroRandom(){
      let numeroPc =  parseInt(Math.floor(Math.random()*6)+1)
@@ -36,54 +35,31 @@ Dichiariamo chi ha vinto.
      console.log("somma:" + somma)
     //  document.querySelector(`.risultati`).innerHTML += `la somma del tuo numero con quella del pc è : ${somma}`
 
+    sceltaPariDispari  = document.querySelector(`#pardis`).value
 
-    // richiamo la funzione in fondo di chi vince
-    document.querySelector(`.risultati`).innerHTML += sceltaVincitore(sceltaPariDispari, somma)
+    // decido chi vince
+    if(pariOrDispari(somma) == sceltaPariDispari){
+        console.log("hai vinto")
+        document.querySelector(`.risultati`).innerHTML += "hai vinto"
+       }else{
+           console.log("hai perso")
+           document.querySelector(`.risultati`).innerHTML += "hai perso"
+       }
  })
-
- // function sceltaVincitore(){
- //     //se la somma è pari
- //     if(somma % 3 != 0){
- //         if(tuoNumero % 3 != 0){
- //             console.log(`hai vinto`)
- //         }else{
- //             console.log(`ha vinto il pc`)
- //         }
- //         //se la somma non è pari
- //     }else{
- //         if(tuoNumero % 3 == 0){
- //             console.log(`hai vinto`)
- //         }else{
- //             console.log(`ha vinto il pc`)
- //         }
- //     }
- // }
 
 
 
  //verifica se la somma dei numeri è pari o dispari
  function pariOrDispari(somma){
      if(somma % 2 == 0){
-         return console.log("pari")
+         return "pari"
         
      }else{
-         return console.log("dispari")
+         return "dispari"
      }
  }
 
- //funzione per decidere chi vince 
- function sceltaVincitore(sceltaPariDispari, somma){
-     sceltaPariDispari = document.querySelector(`#pardis`).value
-     console.log(sceltaPariDispari)
-     const isSommaPari = pariOrDispari(somma)
 
-
-       if(sceltaPariDispari == isSommaPari){
-        return "hai vinto"
-       } else {
-         return "hai perso"
-       }
- }
 
 
 
